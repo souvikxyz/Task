@@ -1,8 +1,17 @@
-<form action='/viewlog' class="inline">
-<button type="submit" class="btn btn-primary">View Log</button>
-</form>
+{% extends 'base.html' %}
+{% block body %}
 
-<form action='/form' class="inline">
-<button type="submit" class="btn btn-primary">Submit Response</button>
-</form>
+<div style="margin-top:30vh;" class="container-fluid text-center">
+    <h1 style="font-family: 'Righteous', cursive;">Welcome to RECursion</h1>
+    <br>
+    <br>
+    <form action='/viewlog' class="inline">
+        <button type="submit" class="btn btn-lg btn-success">View Log</button>
+    </form>
+    <br>
+    <form action='/form' class="inline">
+        <button type="submit" class="btn btn-lg btn-success">Submit Response</button>
+    </form>
+</div>
 
+{% endblock %}
