@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config['dbconfig'] = {'host': '127.0.0.1', 'user': 'souvik', 'database': 'New', }
 
 def log_request(req: 'flask_request') -> None:
-    with UseDatabase(app.config['dbconfig'])as cursor:
+   # with UseDatabase(app.config['dbconfig'])as cursor:
         _SQL = """insert into log (name,email,password,mobile,dob,gender,address,ip,browser)
          values (%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
         cursor.execute(_SQL, (request.form['name'], request.form['email'], request.form['pass'],
