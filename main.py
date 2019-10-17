@@ -39,6 +39,13 @@ def view_the_log()->'html':
     titles=('Sl.No','Time','Name','Email','Password','Contact No','D.O.B','Gender','Address','IP','Browser')
     return render_template('viewlog.html',the_title='View Log',the_row_titles=titles,the_data=contents,)
 
+@app.route('/results', methods=['POST'])
+def results() -> 'html':
+    return render_template('entry.html')
+    name = request.form['name']
+    log_request(name)
+    return render_template('login.html', pass=pswd, )
+
 
 if __name__ == '__main__':
     app.run(debug=True)
