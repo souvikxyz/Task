@@ -11,7 +11,7 @@ def log_request(req: 'flask_request') -> None:
          values (%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
         cursor.execute(_SQL, (request.form['name'], request.form['email'], request.form['pass'],
                               request.form['mobile'],request.form['dob'], request.form['gender'],
-                              request.form['address'], request.remote_addr, req.user_agent.browser))
+                              request.form['address'], request.remote_addr, req.user_agent.browser),req.form['marks'])
 
 @app.route('/')
 @app.route('/entry')
