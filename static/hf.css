@@ -70,3 +70,11 @@ input[type=submit] {
 select {
   font-size:        125%;
 }
+table-top{
+  font-size:          1em;
+background-color:   #ffffff
+border:             1px dotted;
+color:              #7b7b7b;
+padding:            5px 5px 4px;
+}
+  
